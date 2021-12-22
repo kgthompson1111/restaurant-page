@@ -1,1 +1,8 @@
-console.log("I'm working");
+// functions
+import { renderPage } from './pageRender.js';
+import { renderMenu } from './menuPage.js';
+// css
+import './style.css';
+
+renderPage();
+
