@@ -1,8 +1,7 @@
 import MyLogo from './logo.png';
 import AboutSoup from './soup1.jpg';
-import { renderMenu } from './menuPage.js';
 import { renderAbout } from './aboutPage.js';
-import { renderContact } from './contactPage.js';
+
 
 function renderPage() {
     const content = document.getElementById('content');
@@ -35,25 +34,25 @@ function renderPage() {
         navLinks.appendChild(aboutButtonHolder);
         const aboutButtonLink = document.createElement('a');
         aboutButtonLink.innerText = "About";
+        aboutButtonLink.href = "#"
+        aboutButtonLink.id = "aboutButtonLink";
         aboutButtonHolder.appendChild(aboutButtonLink);
 
-        aboutButtonLink.addEventListener('click', renderAbout);
-
     const menuButtonHolder = document.createElement('li');
-        navLinks.appendChild(menuButtonHolder);
-        const menuButtonLink = document.createElement('div');
-        menuButtonLink.innerText = "Menu";
+    navLinks.appendChild(menuButtonHolder);
+        const menuButtonLink = document.createElement('a');
+        menuButtonLink.innerHTML = "Menu";
+        menuButtonLink.href = "#"
+        menuButtonLink.id = "menuButtonLink";
         menuButtonHolder.appendChild(menuButtonLink);
-        
-        menuButtonLink.addEventListener('click', renderMenu);
 
     const contactButtonHolder = document.createElement('li');
         navLinks.appendChild(contactButtonHolder);
         const contactButtonLink = document.createElement('a');
         contactButtonLink.innerText = "Contact";
+        contactButtonLink.href = "#";
+        contactButtonLink.id = "contactButtonLink";
         contactButtonHolder.appendChild(contactButtonLink);
-
-        contactButtonLink.addEventListener('click', renderContact);
         
     //append ul
     navHeader.appendChild(navLinks);

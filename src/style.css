@@ -74,11 +74,13 @@ ul {
 li {
     margin: 20px;
     font-size: 35px;
+    cursor: hand;
 }
 
 a {
     text-decoration: none;
     color: black;
+    cursor: hand;
 }
 
 #contentBody {
@@ -105,7 +107,7 @@ a {
 
 #cardContent {
     width: 100%;
-    background-color: white;
+    background-color: rgb(250, 244, 231);
     height: auto;
     box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.616);
     border: solid 3px #3a222b;
@@ -138,8 +140,8 @@ a {
 }
 
 #cardImage {
-    height: 95%;
     max-height: 650px;
+    max-width: 35%;
     border-bottom-right-radius: 20px;
     border: solid 3px #3a222b;
 
@@ -148,6 +150,7 @@ a {
 
 #footer {
     height: 80px;
+    width: 100vw;
     background-color: #8E5572;
     font-size: 30px;
     border-top: solid 3px #3a222b;
