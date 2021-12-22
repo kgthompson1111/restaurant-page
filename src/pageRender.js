@@ -24,7 +24,8 @@ function renderPage() {
     headerLogo.appendChild(logo);
 
     const headerText = document.createElement('h1');
-    headerText.innerText = "Soup D\'Jour";
+    headerText.id = "headerText";
+    headerText.innerText = "Soup d\'Jour";
     //append header
     headerLogo.appendChild(headerText);
 
@@ -53,6 +54,7 @@ function renderPage() {
         contactButtonHolder.appendChild(contactButtonLink);
 
         contactButtonLink.addEventListener('click', renderContact);
+        
     //append ul
     navHeader.appendChild(navLinks);
 
@@ -69,25 +71,11 @@ function renderPage() {
     cardContent.id = "cardContent";
     card.appendChild(cardContent);
 
-    // content for "Home" page
-    //
-    const aboutHeader = document.createElement('h2');
-    aboutHeader.id = "aboutHeader";
-    aboutHeader.innerText = "About"
-    cardContent.appendChild(aboutHeader);
-
-    const aboutText = document.createElement('div');
-    aboutText.id = "aboutText";
-    aboutText.classList.add("cardText");
-    aboutText.innerHTML = "<p>There's <em>nothing</em> better than a bowl of hot, savoury soup on a cold winter's day.</p><p>That's why we opened our cozy caf&eacute; in the middle of the Canadian tundra</p><p>Feed the body <em>and</em> the soul at Soup D'Jour."
-    cardContent.appendChild(aboutText);
-
     const cardImage = document.createElement('img');
     cardImage.id = "cardImage";
-    cardImage.src = AboutSoup;
     card.appendChild(cardImage);
-    //
-    //////////////
+
+    renderAbout();
 
     //footer
     const footer = document.createElement('div');

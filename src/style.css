@@ -1,23 +1,32 @@
 @font-face {
-    font-family: MyFont;
-    src: url(calibri-bold.TTF);
+    font-family: 'CalibriBold';
+    src: url('./calibribold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CalibriRegular';
+    src: url('./calibriregular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Painter';
+    src: url('./painter.ttf') format('truetype');
 }
 
 * {
     margin: 0;
-    font-family: MyFont;
 }
 
 #navHeader {
     width: 100vw;
     height: 100px;
-    background-color: rgb(200, 72, 60);
+    background-color: #8E5572;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    border-bottom: solid 3px black;
+    border-bottom: solid 3px #3a222b;
 }
 
 #headerLogo {
@@ -25,7 +34,12 @@
     align-items: center;
 }
 
+#headerText {
+    font-family: 'Painter', 'CalibriBold', Arial, sans-serif;
+}
+
 h1 {
+    font-family: 'CalibriBold', Arial, sans-serif;
     margin-left: 20px;
     color: rgb(46, 24, 9);
     font-size: 4vw;
@@ -33,13 +47,15 @@ h1 {
 }
 
 h2 {
-    font-size: 2vw;
+    font-family: 'CalibriRegular', Arial, sans-serif;
+    font-size: 30px;
     margin-bottom: 30px;
 }
 
 h3 {
-    font-size: 1.75vw;
-    margin-bottom: 10px;
+    font-family: 'CalibriRegular', Arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 8px;
 }
 
 #logo {
@@ -49,6 +65,7 @@ h3 {
 }
 
 ul {
+    font-family: CalibriBold, Arial, sans-serif;
     list-style-type: none;
     display: flex;
     margin-right: 20px;
@@ -56,7 +73,7 @@ ul {
 
 li {
     margin: 20px;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 a {
@@ -67,45 +84,45 @@ a {
 #contentBody {
     height: auto;
     width: 100vw;
-    background-color: rgb(246, 215, 130);
+    background-color: #BCAA99;
 
     display: flex;
     justify-content: center;
 }
 
 #card {
-    width: 80vw;
-    background-color: rgb(200, 72, 60);
-
-    border-top-right-radius: 35px;
-    border-bottom-left-radius: 35px;
-    border: solid 3px black;
+    width: 60vw;
+    background-color: #8E5572;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border: solid 3px #3a222b;
 
     margin: 50px 0px;
 
     display: flex;
-    padding-top: 20px;
+    padding: 20px;
 }
 
 #cardContent {
     width: 100%;
     background-color: white;
     height: auto;
-    border-top: solid 3px black;
-    border-bottom: solid 3px black;
-    border-collapse: collapse;
-    border-right: solid 3px black;
     box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.616);
+    border: solid 3px #3a222b;
+    border-top-left-radius: 20px;
+    margin-right: -35px;
 
-    padding: 45px 25px;
+    padding: 30px 60px 0px 25px;
     margin-bottom: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
 }
 
-#cardcontent > div {
-    flex: 1;
+.cardHeader {
+    font-family: 'Painter', 'CalibriBold', Arial, sans-serif;
+    margin-top: 22px;
 }
 
 .cardText {
@@ -113,21 +130,29 @@ a {
     text-align: center;
 }
 
+#footerLogo {
+    width: 40px;
+    height: auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
 #cardImage {
     height: 95%;
     max-height: 650px;
-    margin-right: 17px;
-    border-top-right-radius: 20px;
-    border: solid 3px black;
-    border-collapse: collapse;
-    margin-left: -3px;
+    border-bottom-right-radius: 20px;
+    border: solid 3px #3a222b;
+
+    align-self: flex-end;
 }
 
 #footer {
     height: 80px;
-    background-color: rgb(200, 72, 60);
-    font-size: 4vh;
-    border-top: solid 3px black;
+    background-color: #8E5572;
+    font-size: 30px;
+    border-top: solid 3px #3a222b;
+
+    font-family: 'CalibriRegular',  Arial, sans-serif;
 
     display: flex;
     justify-content: center;

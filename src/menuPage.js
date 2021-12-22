@@ -1,9 +1,11 @@
 import MenuSoup from './soup2.jpg';
+import { renderStamp } from './renderStamp.js';
 
 function renderMenu() {
    cardContent.innerHTML = "";
 
     const menuHeader = document.createElement('h2');
+    menuHeader.classList.add("cardHeader");
     menuHeader.id = "menuHeader";
     menuHeader.innerText = "Menu"
     cardContent.appendChild(menuHeader);
@@ -14,7 +16,7 @@ function renderMenu() {
     cardContent.appendChild(squashSoup);
 
     const squashSoupDescription = document.createElement('div');
-    squashSoupDescription.innerHTML = "<p>Creamy vegan butternut squash soup.</p>"
+    squashSoupDescription.innerHTML = "<p>Creamy vegan butternut squash soup</p>"
     squashSoupDescription.classList.add("cardText");
     cardContent.appendChild(squashSoupDescription);
 
@@ -24,7 +26,7 @@ function renderMenu() {
     cardContent.appendChild(carrotSoup);
 
     const carrotSoupDescription = document.createElement('div');
-    carrotSoupDescription.innerHTML = "<p>Spicy vegan ginger carrot soup.</p>"
+    carrotSoupDescription.innerHTML = "<p>Spicy vegan ginger carrot soup</p>"
     carrotSoupDescription.classList.add("cardText");
     cardContent.appendChild(carrotSoupDescription);
         
@@ -34,7 +36,7 @@ function renderMenu() {
     cardContent.appendChild(tomatoSoup);
 
     const tomatoSoupDescription = document.createElement('div');
-    tomatoSoupDescription.innerHTML = "<p>Savoury vegan heirloom tomato soup.</p>"
+    tomatoSoupDescription.innerHTML = "<p>Savoury vegan heirloom tomato soup</p>"
     tomatoSoupDescription.classList.add("cardText");
     cardContent.appendChild(tomatoSoupDescription);
 
@@ -44,7 +46,7 @@ function renderMenu() {
     cardContent.appendChild(potatoSoup);
 
     const potatoSoupDescription = document.createElement('div');
-    potatoSoupDescription.innerHTML = "<p>Chunky german potato soup.</p>"
+    potatoSoupDescription.innerHTML = "<p>Chunky german potato soup</p>"
     potatoSoupDescription.classList.add("cardText");
     cardContent.appendChild(potatoSoupDescription);
 
@@ -60,9 +62,10 @@ function renderMenu() {
 
     const withToast = document.createElement('div');
     withToast.classList.add("cardText");
-    withToast.innerText = "All soup served with local Einkorn sourdough bread and butter";
+    withToast.innerHTML = "<br><br>All soup served with local Einkorn sourdough bread and butter";
     cardContent.appendChild(withToast);
 
+    renderStamp();
     cardImage.src = MenuSoup;
 }
 
